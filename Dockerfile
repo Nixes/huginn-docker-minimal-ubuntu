@@ -3,6 +3,9 @@ FROM ubuntu:18.04
 # install and configure php
 RUN apt-get update && \
 	apt-get install -y \
+  nano \
+  wget \
+  curl \
   ruby \
   rubygems-integration \
   libmysqlclient-dev \
