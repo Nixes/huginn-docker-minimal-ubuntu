@@ -15,13 +15,12 @@ RUN apt-get update && \
 	sudo
 	
 # install rake and bundler
-gem install rake bundler mysql2
+RUN gem install rake bundler mysql2
 
-# checkout huginn
-git clone https://github.com/huginn/huginn.git
-
-# open folder and install dependencies
-cd huginn && bundle
+# checkout huginn, open folder and install dependencies
+RUN git clone https://github.com/huginn/huginn.git && \
+	cd huginn && \ 
+	bundle
 
 # install and configure db
 RUN echo "mysql-server mysql-server/root_password password root" | debconf-set-selections
