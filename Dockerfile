@@ -2,18 +2,19 @@ FROM ubuntu:18.04
 
 # install and configure php
 RUN apt-get update && \
-	apt-get install -y \
-  	nano \
-  	wget \
-  	curl \
-  	ruby \
-  	rubygems-integration \
-	ruby-dev \
-  	libmysqlclient-dev \
-	git \
-	curl \
-	sudo
-	
+        apt-get install -y \
+        nano \
+        wget \
+        curl \
+        ruby \
+        rubygems-integration \
+        ruby-dev \
+        libmysqlclient-dev \
+        build-essential \
+        git \
+        curl \
+        sudo
+
 # install rake and bundler
 RUN gem install rake bundler mysql2
 
