@@ -21,6 +21,7 @@ RUN gem install rake bundler mysql2
 # checkout huginn, open folder and install dependencies
 RUN git clone https://github.com/huginn/huginn.git && \
 	cd huginn && \ 
+	cp .env.example .env && \
 	bundle
 
 # install and configure db
