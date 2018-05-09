@@ -1,6 +1,4 @@
-FROM ubuntu:latest
-
-RUN echo "deb http://cn.archive.ubuntu.com/ubuntu/ xenial main restricted universe multiverse" >> /etc/apt/sources.list
+FROM ubuntu:18.04
 
 # install and configure php
 RUN apt-get update && \
