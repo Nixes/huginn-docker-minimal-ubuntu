@@ -14,7 +14,7 @@ RUN apt-get update && \
 	sudo
 	
 # install rake and bundler
-gem install rake bundler
+gem install rake bundler mysql2
 
 # checkout huginn
 git clone https://github.com/huginn/huginn.git
