@@ -8,6 +8,7 @@ RUN apt-get update && \
   	curl \
   	ruby \
   	rubygems-integration \
+	ruby-dev \
   	libmysqlclient-dev \
 	git \
 	curl \
