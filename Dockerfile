@@ -18,6 +18,11 @@ RUN apt-get update && \
 # install rake and bundler
 RUN gem install rake bundler mysql2
 
+# set environment variables for string type
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 # checkout huginn, open folder and install dependencies, append some stuff to gemfile to get build to work on default ubuntu install
 RUN git clone https://github.com/huginn/huginn.git && \
 	cd huginn && \ 
