@@ -16,7 +16,7 @@ RUN apt-get update && \
         sudo
 
 # install rake and bundler
-RUN gem install rake bundler mysql2
+RUN gem install rake bundler foreman mysql2
 
 # set environment variables for string type
 RUN export LANG=en_US.UTF-8 && \
