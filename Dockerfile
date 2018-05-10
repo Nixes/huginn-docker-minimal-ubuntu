@@ -15,13 +15,13 @@ RUN apt-get update && \
         curl \
         sudo
 
+# set locale to en_US.utf8 since it is required by bundle
+RUN apt-get update && apt-get install -y locales && rm -rf /var/lib/apt/lists/* \
+	&& localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
+ENV LANG en_US.utf8
+
 # install rake and bundler
 RUN gem install rake bundler foreman mysql2
-
-# set environment variables for string type
-RUN export LANG=en_US.UTF-8 && \
-	export LANGUAGE=en_US.UTF-8 && \ 
-	export LC_ALL=en_US.UTF-8
 
 # checkout huginn, open folder and install dependencies, append some stuff to gemfile to get build to work on default ubuntu install
 RUN git clone https://github.com/huginn/huginn.git && \
