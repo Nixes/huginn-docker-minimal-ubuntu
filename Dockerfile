@@ -1,5 +1,8 @@
 FROM ubuntu:18.04
 
+# disable interactive apt-get
+ENV DEBIAN_FRONTEND=noninteractive
+
 # install and configure php
 RUN apt-get update && \
         apt-get install -y \
