@@ -1,4 +1,8 @@
 #!/bin/bash
+# start mysql server
+sudo service mysql start
+sleep 1
+
 cd huginn
 
 # initialise db
