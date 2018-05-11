@@ -34,8 +34,8 @@ RUN git clone https://github.com/huginn/huginn.git && \
 	bundle
 
 # install and configure db
-RUN echo "mysql-server mysql-server/root_password password root" | debconf-set-selections
-RUN echo "mysql-server mysql-server/root_password_again password root" | debconf-set-selections
+RUN echo "mysql-server mysql-server/root_password password " | debconf-set-selections
+RUN echo "mysql-server mysql-server/root_password_again password " | debconf-set-selections
 
 RUN apt-get update && \
 	apt-get -y install mysql-server-5.7 && \
