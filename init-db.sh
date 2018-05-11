@@ -1,4 +1,5 @@
 #!/bin/bash
+cd huginn
 
 # initialise db
 echo "Creating tables"
