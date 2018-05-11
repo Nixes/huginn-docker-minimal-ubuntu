@@ -58,6 +58,10 @@ VOLUME /var/lib/mysql
 # enable sudo for docker user
 RUN echo "docker ALL=NOPASSWD: ALL" >> /etc/sudoers
 
+# copy db initilisation script
+COPY init-db.sh /usr/sbin/
+RUN chmod +x /usr/sbin/init-db.sh
+
 # start huginn
 COPY start-huginn.sh /usr/sbin/
 RUN chmod +x /usr/sbin/start-huginn.sh
