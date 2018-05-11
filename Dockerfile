@@ -31,8 +31,6 @@ RUN gem install rake bundler foreman mysql2
 RUN git clone https://github.com/huginn/huginn.git && \
 	cd huginn && \ 
 	cp .env.example .env && \
-	echo Encoding.default_external = Encoding::UTF_8 > Gemfile && \
-	echo Encoding.default_internal = Encoding::UTF_8 > Gemfile && \
 	bundle
 
 # install and configure db
