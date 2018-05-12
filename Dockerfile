@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 # disable interactive apt-get
 ENV DEBIAN_FRONTEND=noninteractive
 
-# install and configure php
+# install and configure required packages
 RUN apt-get update && \
         apt-get install -y \
 	tzdata \
