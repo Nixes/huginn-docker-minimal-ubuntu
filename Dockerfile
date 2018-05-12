@@ -27,7 +27,7 @@ ENV LANG en_US.utf8
 # install rake and bundler
 RUN gem install rake bundler foreman mysql2
 
-# checkout huginn, open folder and install dependencies, append some stuff to gemfile to get build to work on default ubuntu install
+# checkout huginn, open folder and install dependencies
 RUN git clone https://github.com/huginn/huginn.git && \
 	cd huginn && \ 
 	cp .env.example .env && \
